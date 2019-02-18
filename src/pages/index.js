@@ -39,7 +39,7 @@ export default class IndexPage extends React.Component {
             {posts
               .map(({ node: post }) => (
                 <div
-                  className="content column is-3                 "
+                  className="content column is-3"
                   style={{ border: '1px solid #333', padding: '2em 4em' }}
                   key={post.id}
                 >
