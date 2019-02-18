@@ -39,7 +39,7 @@ export default class IndexPage extends React.Component {
             {posts
               .map(({ node: post }) => (
                 <div
-                  className="content column is-4                 "
+                  className="content column is-5                 "
                   style={{ border: '1px solid #333', padding: '2em 4em' }}
                   key={post.id}
                 >
@@ -64,7 +64,7 @@ export default class IndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-            <h2 className="has-text-weight-bold" > My Github Repositories </h2> 
+            <h2 className="has-text-weight-bold" > My Github <a  href="https://github.com/OliverRedmanCooke" >Repositories</a></h2> 
             <GitRepo/>
             </div>
           </div>
