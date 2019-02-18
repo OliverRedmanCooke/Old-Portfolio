@@ -19,7 +19,7 @@ export default class IndexPage extends React.Component {
                   Oliver R Cooke 
                   </h1>
                   <h2 className="subtitle">
-                    Full Stack Developer with a passion for clean code and user centered design
+                    Full stack developer with a passion for clean code and user centered design
                   </h2>
                 </div> 
                 <div className="content has-text-centered">
@@ -30,17 +30,16 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
         </section>
-        <GitRepo/>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 className="has-text-weight-bold is-size-2"> Projects </h1>
+              <h2 className="has-text-weight-bold is-size-2"> Projects </h2>
             </div>
             <div className="columns">
             {posts
               .map(({ node: post }) => (
                 <div
-                  className="content column is-3                  "
+                  className="content column is-3                 "
                   style={{ border: '1px solid #333', padding: '2em 4em' }}
                   key={post.id}
                 >
@@ -61,6 +60,14 @@ export default class IndexPage extends React.Component {
                 </div>
               ))}
               </div>
+          </div>
+        </section>
+        <section className="section">
+          <div className="container">
+            <div className="content">
+            <h2 className="has-text-weight-bold" > My Github Repositories </h2> 
+            <GitRepo/>
+            </div>
           </div>
         </section>
       </Layout>
