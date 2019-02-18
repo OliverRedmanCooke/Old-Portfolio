@@ -39,7 +39,7 @@ export default class IndexPage extends React.Component {
             {posts
               .map(({ node: post }) => (
                 <div
-                  className="content column is-3                 "
+                  className="content column is-4                 "
                   style={{ border: '1px solid #333', padding: '2em 4em' }}
                   key={post.id}
                 >
@@ -47,10 +47,9 @@ export default class IndexPage extends React.Component {
                     <Link className="has-text-primary" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
                   </h3>
                   <p>
-                    {post.excerpt}
+                    {post.frontmatter.description}
                     <br />
                     <br />
                     <Link className="button is-small" to={post.fields.slug}>
@@ -91,7 +90,6 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 200)
           id
           fields {
             slug
@@ -99,6 +97,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            description
             date(formatString: "MMMM DD, YYYY")
           }
         }
