@@ -1,45 +1,24 @@
-@import "~bulma/sass/utilities/initial-variables"
+@import "~bulma/sass/utilities/_all"
+@import "~bulma/sass/base/_all"
+@import "~bulma/sass/components/_all"
+@import "~bulma/sass/elements/_all"
+@import "~bulma/sass/grid/_all"
+@import "~bulma/sass/layout/_all"
 
-$body-color: black
-$text-color: white
+/* Link to colour guide -  https://material.io/tools/color/#!/?view.left=1&view.right=0&primary.color=ECEFF1&secondary.color=006064   */
 
-body 
-  background-color: $body-color
-  $text-color: white
+$primary: #eceff1
+$primary-l: #ffffff
+$primary-d: #babdbe
 
-.navbar .navbar-menu
-  box-shadow:none !important
+$secondary: #006064
+$secondary-l: #428e92
+$secondary-d: #00363a
 
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
 
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 5em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
 
-.margin-top-0
-  margin-top: 0 !important
+
+@import "Pages"
+
 
 @import "~bulma"
