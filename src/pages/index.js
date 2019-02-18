@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import GitRepo from '../components/GitRepo';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,35 +11,56 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <section className="hero ">
+            <div className="hero-body">
+              <div className="container">
+                <div className="hero-text"> 
+                  <h1 className="title is-spaced">
+                  Oliver R Cooke 
+                  </h1>
+                  <h2 className="subtitle">
+                    Full Stack Developer with a passion for clean code and user centered design
+                  </h2>
+                </div> 
+                <div className="content has-text-centered">
+                  <Link className=" button dark" to="/contact">
+                  Get in touch
+                  </Link>
+                </div>
+              </div>
+            </div>
+        </section>
+        <GitRepo/>
         <section className="section">
           <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2"> Projects </h1>
             </div>
+            <div className="columns">
             {posts
               .map(({ node: post }) => (
                 <div
-                  className="content"
+                  className="content column is-3                  "
                   style={{ border: '1px solid #333', padding: '2em 4em' }}
                   key={post.id}
                 >
-                  <p>
+                  <h3>
                     <Link className="has-text-primary" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
+                  </h3>
                   <p>
                     {post.excerpt}
                     <br />
                     <br />
                     <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
+                      Find out more
                     </Link>
                   </p>
                 </div>
               ))}
+              </div>
           </div>
         </section>
       </Layout>
@@ -62,7 +84,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 200)
           id
           fields {
             slug
