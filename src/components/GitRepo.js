@@ -4,9 +4,9 @@ import axios from 'axios';
 
 const Repo = ({ repo, index }) =>
   <tr>
-    <td>{index + 1}</td>
+    <td className="mobile-view">{index + 1}</td>
     <td className="repo-name">{repo.name}</td>
-    <td> {repo.description} </td> 
+    <td  className="mobile-view" > {repo.description} </td> 
     <td> {repo.language}   </td> 
   </tr>;
 
@@ -73,9 +73,9 @@ export default class GitHubRepos extends React.Component {
       <table className="table table-striped">
         <thead>
           <tr>
-            <th>#</th>
+            <th className="mobile-view">#</th>
             <th>Repo Name</th>
-            <th>Description</th>
+            <th className="mobile-view">Description</th>
             <th>Language</th>
           </tr>
         </thead>
