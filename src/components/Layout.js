@@ -29,6 +29,8 @@ const TemplateWrapper = ({ children }) => (
 	        <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
 	
 	        <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
+          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+
 	        <meta name="theme-color" content="#fff" />
 
 	        <meta property="og:type" content="business.business" />
