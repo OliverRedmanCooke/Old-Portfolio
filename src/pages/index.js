@@ -37,7 +37,7 @@ export default class IndexPage extends React.Component {
             </div>
             <div className="columns">
             {posts
-              .map(({ node: post }) => (
+              .slice(0, 4).map(({ node: post }) =>  (
                 <div
                   className="content column"
                   style={{ border: '1px solid #333', padding: '2em 4em' }}
