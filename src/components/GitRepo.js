@@ -4,7 +4,7 @@ import axios from 'axios';
 const Repo = ({ repo, index }) =>
   <tr>
     <td className="mobile-view">{index + 1}</td>
-    <td className="repo-name">{repo.name}</td>
+    <td className="repo-name"><a href={repo.html_url}>{repo.name}</a></td>
     <td  className="mobile-view" > {repo.description} </td> 
     <td> {repo.language}   </td> 
   </tr>;

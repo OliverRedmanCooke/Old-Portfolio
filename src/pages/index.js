@@ -15,10 +15,10 @@ export default class IndexPage extends React.Component {
             <div className="hero-body">
               <div className="container">
                 <div className="hero-text"> 
-                  <h1 className="title is-spaced">
+                  <h1 className="title is-spaced is-size-2">
                   Oliver R Cooke 
                   </h1>
-                  <h2 className="subtitle">
+                  <h2 className="subtitle has-text-weight-bold">
                     Full stack developer with a passion for clean code and user centered design
                   </h2>
                 </div> 
@@ -33,7 +33,7 @@ export default class IndexPage extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h2 className="has-text-weight-bold is-size-2"> Projects </h2>
+              <h2 className="has-text-weight-bold "> Projects -<Link to="/projects"> view more </Link> </h2>
             </div>
             <div className="columns">
             {posts
@@ -85,7 +85,7 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
+      sort: { order: ASC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
     ) {
       edges {
@@ -105,3 +105,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+
