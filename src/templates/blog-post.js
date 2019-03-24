@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import Metatags from '../components/Metatags';
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
